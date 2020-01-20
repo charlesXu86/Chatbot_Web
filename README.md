@@ -1,4 +1,4 @@
-# UI for 天气预报查询机器人
+# Chatbot_Web  Chatbot_CN项目的页面UI展示部分
 
 ## 功能
 提供一个静态的基于 WEB 的用户界面，方便用户和机器人进行对话
@@ -18,15 +18,15 @@ pip install -r requirements.txt
 
 访问 http://127.0.0.1:8000
 
-## 在线演示
-http://weather_bot.xiaoquankong.ai/
-
 ## 作者
 
-Xiaoquan Kong @ https://github.com/howl-anderson
+Xu @ https://github.com/charlesXu86
 
 ## Credits
 所用的 `webchat.js` 来自于 [rasa-webchat](https://github.com/mrbot-ai/rasa-webchat) 项目
+
+## Resource
+本项目参考了 [WeatherBot_UI](https://github.com/howl-anderson/WeatherBot_UI) 项目
 
 ## Copyrights
 
