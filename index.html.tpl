@@ -788,10 +788,6 @@
         <li>受限于天气数据提供方的能力，这个机器人只能查询 <strong>中国地区市级</strong> 三天以内 <strong>（今天，明天，后天）</strong>
             的气象数据，<strong>不能查询过去</strong>（昨天，前天）等历史数据。
         </li>
-        <li>受限于开发时间，这个机器人 <strong>不提供</strong> 诸如 <strong>这个星期五、下个星期一</strong>
-            这种需要计算才能得到日期给定方式。也 <strong>不能提供</strong> 诸如 <strong>绝对日期：三月一号、六一儿童节日</strong>
-            这种日期的查询能力。
-        </li>
         <li>因为使用的是免费的天气查询接口，所以 <strong>会有配额限制</strong>，可能会因为
             <strong>超出调用次数</strong> ，而在一个小时内不能用。同时网络查询接口可能存在不稳定因素，导致 <strong>没有结果返回或者出现异常</strong>，<strong>尝试多次重新发送请求可解决问题</strong>。
         </li>
@@ -802,13 +798,21 @@
     <p>见页面右下方的聊天widget <img
             src="chat_button.png"
             alt="chat_button" style="width:40px;height:40px;">，点击即可使用</p>
+
+    <h2 class="mume-header" id="faq">FAQ</h2>
+
+    <p>1、 为什么我在对话输入框中输入了对话，机器人却不回复我？</p>
+    <p>答：由于这里的server_url调用的是rasa的restful api服务，所以在和机器人对话之前确保rasa的服务可以正常调用，另外，这个
+    存在js的跨域请求的问题，一般在浏览器控制台会出现"Access-Control-Allow-Origin"的问题，解决测问题的方法是在启动rasa服务的时候
+    加上"--cors "*" "参数</p>
+
     <h2 class="mume-header" id="%E4%BD%9C%E8%80%85">作者</h2>
 
     <p>Xu @ <a href="https://github.com/charlesXu86">https://github.com/charlesXu86</a>
     </p>
 
     <h2 class="mume-header" id="reference">Reference</h2>
-    <p>本页面根据howl-anderson/WeatherBot_UI @ <a href="https://github.com/howl-anderson/WeatherBot_UI">WeatherBot_UI</a>
+    <p>本页面根据howl-anderson/WeatherBot_UI @ <a href="https://github.com/howl-anderson/WeatherBot_UI">WeatherBot_UI</a>修改
     </p>
 
     <h2 class="mume-header" id="copyrights">Copyrights</h2>
@@ -826,13 +830,15 @@
 
 <div id="webchat"/>
 <script src="webchat.js"></script>
+<!-- <script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script> -->
 <script>
     WebChat.default.init({
         selector: "#webchat",
-        initPayload: "你好",
+        initPayload: "/get_started",
         interval: 1000, // 1000 ms between each message
-        customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+        customData: {"language": "zh"}, // arbitrary custom data. Stay minimal as this will be added to the socket
         socketUrl: "{{ server_url }}",
+        socketPath: "/webhooks/rest/webhook",
         title: "智能机器人",
         subtitle: "小笨",
         profileAvatar: "robotic.png",
