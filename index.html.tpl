@@ -806,6 +806,11 @@
 
     <p>Xu @ <a href="https://github.com/charlesXu86">https://github.com/charlesXu86</a>
     </p>
+
+    <h2 class="mume-header" id="reference">Reference</h2>
+    <p>本页面根据howl-anderson/WeatherBot_UI @ <a href="https://github.com/howl-anderson/WeatherBot_UI">WeatherBot_UI</a>
+    </p>
+
     <h2 class="mume-header" id="copyrights">Copyrights</h2>
 
     <div>Robot icon in web-chat interface made by <a

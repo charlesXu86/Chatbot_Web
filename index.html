@@ -760,11 +760,23 @@
 
     <h2 class="mume-header" id="%E5%8A%9F%E8%83%BD">源代码地址</h2>
 
-    <a href="https://github.com/howl-anderson/WeatherBot">https://github.com/charlesXu86/Chatbot_CN</a>
+    <a href="https://github.com/charlesXu86/Chatbot_CN">https://github.com/charlesXu86/Chatbot_CN</a>
 
     <h2 class="mume-header" id="%E5%8A%9F%E8%83%BD">功能</h2>
 
-    <p>这个机器人可以根据你提供的城市（北京、上海等）和日期（明天、后天等），查询出相应的天气预报。</p>
+    <p>这个机器人可以完成一系列的任务型对话场景，包括但不局限于查天气、订机票等，目前正在扩充机器人场景：</p>
+
+    <ul>
+        <li>查天气
+        </li>
+        <li>订机票
+        </li>
+        <li>电话回访
+        </li>
+        <li>。。。。
+        </li>
+    </ul>
+
     <h2 class="mume-header" id="%E7%89%B9%E6%80%A7">特性</h2>
 
     <p>使用 Frame-based 对话管理方案，如果上述两个 Slot (既城市和天气)，有任意一个用户未提供，对话管理系统会负责让你澄清相关
@@ -792,8 +804,13 @@
             alt="chat_button" style="width:40px;height:40px;">，点击即可使用</p>
     <h2 class="mume-header" id="%E4%BD%9C%E8%80%85">作者</h2>
 
-    <p>Xiaoquan Kong @ <a href="https://github.com/howl-anderson">https://github.com/howl-anderson</a>
+    <p>Xu @ <a href="https://github.com/charlesXu86">https://github.com/charlesXu86</a>
     </p>
+
+    <h2 class="mume-header" id="reference">Reference</h2>
+    <p>本页面根据howl-anderson/WeatherBot_UI @ <a href="https://github.com/howl-anderson/WeatherBot_UI">WeatherBot_UI</a>
+    </p>
+
     <h2 class="mume-header" id="copyrights">Copyrights</h2>
 
     <div>Robot icon in web-chat interface made by <a
@@ -815,7 +832,7 @@
         initPayload: "你好",
         interval: 1000, // 1000 ms between each message
         customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
-        socketUrl: "http://127.0.0.1:5002",
+        socketUrl: "http://172.18.86.20:5005/",
         title: "智能机器人",
         subtitle: "小笨",
         profileAvatar: "robotic.png",
