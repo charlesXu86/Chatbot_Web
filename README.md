@@ -13,11 +13,12 @@ pip install -r requirements.txt
 
 ## 启动
 ```bash
-./start_server.bash
+sh start_server.sh
 ```
 访问 http://127.0.0.1:8000 
-调用其他服务的地址在render.py里面修改
-启动服务的端口可以自行指定
+
+    调用其他服务的地址在render.py里面修改
+    启动服务的端口可以自行指定
 
 ## FAQ
 1、 为什么我在对话输入框中输入了对话，机器人却不回复我？
