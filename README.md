@@ -15,8 +15,14 @@ pip install -r requirements.txt
 ```bash
 ./start_server.bash
 ```
+访问 http://127.0.0.1:8000 
+调用其他服务的地址在render.py里面修改
+启动服务的端口可以自行指定
 
-访问 http://127.0.0.1:8000
+## FAQ
+1、 为什么我在对话输入框中输入了对话，机器人却不回复我？
+
+答：由于这里的server_url调用的是rasa的restful api服务，所以在和机器人对话之前确保rasa的服务可以正常调用，另外，这个 存在js的跨域请求的问题，一般在浏览器控制台会出现"Access-Control-Allow-Origin"的问题，解决测问题的方法是在启动rasa服务的时候 加上"--cors "*" "参数
 
 ## 作者
 
