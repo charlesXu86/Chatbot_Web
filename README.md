@@ -1,6 +1,7 @@
-# Chatbot_Web  Chatbot_CN项目的页面UI展示部分
+# Chatbot_Web 
 
 ## 功能
+Chatbot_CN项目的页面UI展示部分 <br/>
 提供一个静态的基于 WEB 的用户界面，方便用户和机器人进行对话
 
 ## 依赖
